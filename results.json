@@ -1,0 +1,45 @@
+{
+  "rows_raw": 53940,
+  "rows_clean": 53772,
+  "removed": {
+    "duplicates": 146,
+    "zero_dimension": 19,
+    "outliers": 3
+  },
+  "train_rows": 43017,
+  "test_rows": 10755,
+  "cross_validation": {
+    "Linear Regression": {
+      "cv_r2": 0.9556,
+      "cv_mae_usd": 443.7
+    },
+    "Random Forest": {
+      "cv_r2": 0.9807,
+      "cv_mae_usd": 271.1
+    },
+    "Gradient Boosting": {
+      "cv_r2": 0.981,
+      "cv_mae_usd": 277.5
+    }
+  },
+  "best_params": {
+    "min_samples_leaf": "10",
+    "max_leaf_nodes": "63",
+    "max_iter": "600",
+    "learning_rate": "0.03",
+    "l2_regularization": "0.1"
+  },
+  "test_metrics": {
+    "r2": 0.9822,
+    "mae_usd": 265.8,
+    "rmse_usd": 526.6,
+    "median_abs_pct_error": 4.54
+  },
+  "baseline_linear_mae_usd": 440.5,
+  "top_features": [
+    "y",
+    "carat",
+    "volume",
+    "clarity"
+  ]
+}
